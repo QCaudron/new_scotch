@@ -36,7 +36,7 @@ class Model(object):
         self._variables_map = {variable: idx for idx, variable in enumerate(self.variables)}
         self.construct_transition_matrix()
 
-    def _construct_transition_matrix(self)
+    def _construct_transition_matrix(self):
 
         transition_matrix = np.zeros((self._n_variables, self._n_events))
         for idx, event in enumerate(self.events):
