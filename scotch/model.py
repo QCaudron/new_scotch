@@ -26,15 +26,14 @@ class Model(object):
             self.parameters = model["parameters"]
             self.events = model["events"]
             self.default_algorithm = model.get("default_algorithm", "gillespie")
-
-        self.build()
+            self.build()
 
     def build(self, silent=False):
 
         self._n_variables = len(self.variables)
         self._n_events = len(self.events)
         self._variables_map = {variable: idx for idx, variable in enumerate(self.variables)}
-        self.construct_transition_matrix()
+        #self.construct_transition_matrix()
 
     def _construct_transition_matrix(self):
 
